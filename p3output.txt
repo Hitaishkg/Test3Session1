@@ -1,1 +1,78 @@
-
+Breakpoint 1, main () at p3original.c:22
+22  int main(){
+(gdb) n
+24      input(&n,&r);
+(gdb) s
+input (n=0x7ffebbdb408c, r=0x7ffebbdb4090) at p3original.c:3
+3       printf("Enter the values of 'n' and 'r'\n");
+(gdb) n
+Enter the values of 'n' and 'r'
+4       scanf("%d %d",n,r);
+(gdb) n
+9 3
+5   }
+(gdb) n
+main () at p3original.c:25
+25      result=ncr(n,r);
+(gdb) s
+ncr (n=9, r=3) at p3original.c:16
+16      result=(fact(n))/(fact(r)*fact(n-r));
+(gdb) s
+fact (n=9) at p3original.c:7
+7       int factorial=1;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+10      factorial*=i;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+10      factorial*=i;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+10      factorial*=i;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+10      factorial*=i;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+10      factorial*=i;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+10      factorial*=i;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+10      factorial*=i;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+10      factorial*=i;
+(gdb) n
+9       for( i=2;i<=n;i++){
+(gdb) n
+12      return factorial;
+(gdb) n
+13  }
+(gdb) n
+ncr (n=9, r=3) at p3original.c:17
+17      return result;
+(gdb) n
+18  }
+(gdb) n
+main () at p3original.c:26
+26      output(n,r,result);
+(gdb) s
+output (n=9, r=3, result=84) at p3original.c:20
+20      printf("The nCr value of %d %d is %d",n,r,result);
+(gdb) n
+21  }
+(gdb) n
+main () at p3original.c:27
+27      return 0;
+(gdb) n
+28  }(gdb) 
