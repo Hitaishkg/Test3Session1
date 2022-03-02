@@ -1,1 +1,104 @@
-
+Breakpoint 1, main () at p2original.c:54
+54      f1=input_fraction();
+(gdb) s
+input_fraction () at p2original.c:7
+7   frac input_fraction(){
+(gdb) n
+9       printf("Enter the Numeraor and Denominator of fraction\n");
+(gdb) n
+Enter the Numeraor and Denominator of fraction
+10      scanf("%d %d",&a.num,&a.den);
+(gdb) n
+1 2
+11      return a;
+(gdb) n
+12  }
+(gdb) n
+main () at p2original.c:55
+55      f2=input_fraction();
+(gdb) s
+input_fraction () at p2original.c:7
+7   frac input_fraction(){
+(gdb) n
+9       printf("Enter the Numeraor and Denominator of fraction\n");
+(gdb) n
+Enter the Numeraor and Denominator of fraction
+10      scanf("%d %d",&a.num,&a.den);
+(gdb) n
+1 4
+11      return a;
+(gdb) n
+12  }
+(gdb) n
+main () at p2original.c:56
+56      f3=input_fraction();
+(gdb) s
+input_fraction () at p2original.c:7
+7   frac input_fraction(){
+(gdb) n
+9       printf("Enter the Numeraor and Denominator of fraction\n");
+(gdb) n
+Enter the Numeraor and Denominator of fraction
+10      scanf("%d %d",&a.num,&a.den);
+(gdb) n
+1 6
+11      return a;
+(gdb) n
+12  }
+(gdb) n
+main () at p2original.c:57
+57      smallest=smallest_fraction(f1,f2,f3);
+(gdb) s
+smallest_fraction (f1=..., f2=..., f3=...) at p2original.c:15
+15      a=(f1.num);
+(gdb) n
+16      b=(f2.num);
+(gdb) n
+17      c=(f3.num);
+(gdb) n
+18      e=(f1.den);
+(gdb) n
+19      f=(f2.den);
+(gdb) n
+20      g=(f3.den);
+(gdb) n
+21      h=a/e;
+(gdb) n
+22      i=b/f;
+(gdb) n
+23      j=c/g;
+(gdb) n
+24       if(h<i && h<j){
+(gdb) n
+27      else if(i<j&& i<h){
+(gdb) n
+30      else if(j<h && j<i){
+(gdb) n
+31          d=3;
+(gdb) n
+34      printf("%f %f\n",h,i);
+(gdb) n
+0.500000 0.250000
+35     return d;
+(gdb) n
+36  }
+(gdb) n
+main () at p2original.c:58
+58      output(f1,f2,f3,smallest);
+(gdb) s
+output (f1=..., f2=..., f3=..., smallest=3) at p2original.c:38
+38      if(smallest==1){
+(gdb) n
+41      else if(smallest==2){
+(gdb) n
+44      else if (smallest==3){
+(gdb) n
+45           printf("The smallest fraction is %d/%d",f3.num,f3.den);
+(gdb) n
+50  }
+(gdb) n
+main () at p2original.c:59
+59      return 0;
+(gdb) n
+60  }
+(gdb) n

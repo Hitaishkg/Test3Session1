@@ -1,1 +1,65 @@
-
+Breakpoint 1, main () at p1original.c:21
+21  int main(){
+(gdb) n
+23      input(&num1,&den1,&num2,&den2);
+(gdb) s
+input (num1=0x7ffdc4d81de0, den1=0x7ffdc4d81dec, 
+    num2=0x7ffdc4d81de4, den2=0x7ffdc4d81df0)
+    at p1original.c:3
+3       printf("Enter the Numeraor and Denominator of fraction 1\n");
+(gdb) n
+Enter the Numeraor and Denominator of fraction 1
+4       scanf("%d %d",num1,den1);
+(gdb) n
+1 2
+5       printf("Enter the Numeraor and Denominator of fraction 2\n");
+(gdb) n
+Enter the Numeraor and Denominator of fraction 2
+6       scanf("%d %d",num2,den2);
+(gdb) 1 4
+(gdb) n
+1 4
+7   }
+(gdb) n
+main () at p1original.c:24
+24      add(num1,den1,num2,den2,&num3,&den3);
+(gdb) s
+add (num1=1, den1=2, num2=1, den2=4, num3=0x7ffdc4d81de8, 
+    den3=0x7ffdc4d81df4) at p1original.c:9
+9       *num3=((den2*num1)+(den1*num2));
+(gdb) n
+10      *den3=(den1*den2);
+(gdb) n
+11      for(int i=2;i<=*den3;i++){
+(gdb) n
+12          if(*num3%i==0 && *den3%i==0){
+(gdb) n
+13              *num3=*num3/i;
+(gdb) n
+14              *den3=*den3/i;
+(gdb) n
+11      for(int i=2;i<=*den3;i++){
+(gdb) n
+12          if(*num3%i==0 && *den3%i==0){
+(gdb) n
+11      for(int i=2;i<=*den3;i++){
+(gdb) n
+12          if(*num3%i==0 && *den3%i==0){
+(gdb) n
+11      for(int i=2;i<=*den3;i++){
+(gdb) n
+17  }
+(gdb) n
+main () at p1original.c:25
+25      output(num1,den1,num2,den2,num3,den3);
+(gdb) s
+output (num1=1, den1=2, num2=1, den2=4, num3=3, den3=4)
+    at p1original.c:19
+19      printf("The sum of %d/%d + %d/%d is %d/%d",num1,den1,num2,den2,num3,den3);
+(gdb) n
+20  }
+(gdb) n
+main () at p1original.c:26
+26      return 0;
+(gdb) n
+27  }(gdb) 
