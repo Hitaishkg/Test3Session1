@@ -1,1 +1,127 @@
-
+Breakpoint 1, main () at p4original.c:40
+40  int main(){
+(gdb) n
+43      n=input_degree();
+(gdb) s
+input_degree () at p4original.c:2
+2   int input_degree(){
+(gdb) n
+4       printf("Enter the degree of the polynoial\n");
+(gdb) n
+Enter the degree of the polynoial
+5       scanf("%d",&n);
+(gdb) n
+2
+6       return n;
+(gdb) n
+7   }
+(gdb) n
+main () at p4original.c:44
+44      x=input_x();
+(gdb) s
+input_x () at p4original.c:8
+8   float input_x(){
+(gdb) n
+10      printf("Enter the value of x\n");
+(gdb) n
+Enter the value of x
+11      scanf("%f",&x); 
+(gdb) n
+1
+12      return x;       
+(gdb) n
+13  }
+(gdb) n
+main () at p4original.c:45
+45      float a[n];
+(gdb) n
+46      input_coefficients(n,a);
+(gdb) s
+input_coefficients (n=2, a=0x7fffd80c0040)
+    at p4original.c:16
+16      for( i=0;i<=n;i++){
+(gdb) n
+17          printf("Enter the %d coefficients of x\n",i+1);
+(gdb) n
+Enter the 1 coefficients of x
+18          scanf("%f",&a[i]);
+(gdb) n
+1
+16      for( i=0;i<=n;i++){
+(gdb) n
+17          printf("Enter the %d coefficients of x\n",i+1);
+(gdb) n
+Enter the 2 coefficients of x
+18          scanf("%f",&a[i]);
+(gdb) n
+1
+16      for( i=0;i<=n;i++){
+(gdb) n
+17          printf("Enter the %d coefficients of x\n",i+1);
+(gdb) n
+Enter the 3 coefficients of x
+18          scanf("%f",&a[i]);
+(gdb) n
+1
+16      for( i=0;i<=n;i++){
+(gdb) n
+20  }
+(gdb) n
+main () at p4original.c:47
+47      result=evaluate_polynomial(n,a,x);
+(gdb) s
+evaluate_polynomial (n=2, a=0x7fffd80c0040, x=1)
+    at p4original.c:22
+22      float temp1=0,temp2,result,temp3;
+(gdb) n
+23      temp1=temp1+a[0];
+(gdb) n
+24      for(int i=0;i<n;i++){
+(gdb) n
+25          temp2=temp1*x;
+(gdb) n
+26          temp3=a[i+1]+temp2;
+(gdb) n
+27          temp1=temp3;
+(gdb) n
+24      for(int i=0;i<n;i++){
+(gdb) n
+25          temp2=temp1*x;
+(gdb) n
+26          temp3=a[i+1]+temp2;
+(gdb) n
+27          temp1=temp3;
+(gdb) n
+24      for(int i=0;i<n;i++){
+(gdb) n
+30      return temp1;
+(gdb) n
+31  }
+(gdb) n
+main () at p4original.c:48
+48      output(n,a,x,result);
+(gdb) s
+output (n=2, a=0x7fffd80c0040, x=1, result=3)
+    at p4original.c:33
+33      printf("The value of ");
+(gdb) n
+34      for(int i=0;i<n;i++){
+(gdb) n
+35          printf("%.0f +",a[i]);
+(gdb) n
+34      for(int i=0;i<n;i++){
+(gdb) n
+35          printf("%.0f +",a[i]);
+(gdb) n
+34      for(int i=0;i<n;i++){
+(gdb) n
+37      printf("%.0f",a[n]);
+(gdb) n
+38      printf("is %.2f",result);
+(gdb) n
+39  }
+(gdb) n
+main () at p4original.c:49
+49      return 0;
+(gdb) n
+50  }
