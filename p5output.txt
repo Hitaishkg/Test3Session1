@@ -1,1 +1,113 @@
-
+Breakpoint 1, main () at p5original.c:33
+33  int main(){
+(gdb) n
+35      n=input_size();
+(gdb) s
+input_size () at p5original.c:2
+2   int input_size(){
+(gdb) n
+4       printf("Enter the number of numbers to be compared\n");
+(gdb) n
+Enter the number of numbers to be compared
+5       scanf("%d",&n);
+(gdb) n
+3
+6       return n;
+(gdb) n
+7   }
+(gdb) n
+main () at p5original.c:36
+36      int a[n];
+(gdb) n
+37      input_array(n,a);
+(gdb) s
+input_array (n=3, a=0x7ffe59bb6570) at p5original.c:10
+10      for(i=0;i<n;i++){
+(gdb) n
+11          printf("Enter the %d number\n",i+1);
+(gdb) n
+Enter the 1 number
+12          scanf("%d",&a[i]);
+(gdb) n
+2
+10      for(i=0;i<n;i++){
+(gdb) n
+11          printf("Enter the %d number\n",i+1);
+(gdb) n
+Enter the 2 number
+12          scanf("%d",&a[i]);
+(gdb) n
+1
+10      for(i=0;i<n;i++){
+(gdb) n
+11          printf("Enter the %d number\n",i+1);
+(gdb) n
+Enter the 3 number
+12          scanf("%d",&a[i]);
+(gdb) n
+5
+10      for(i=0;i<n;i++){
+(gdb) n
+14  }
+(gdb) n
+main () at p5original.c:39
+39      largest=find_largest(n,a);
+(gdb) s
+find_largest (n=3, a=0x7ffe59bb6570) at p5original.c:16
+16      int temp=0,temp1=0;
+(gdb) n
+18      for(i=0;i<n;i++){
+(gdb) n
+19          if(a[i]>temp){
+(gdb) n
+20              temp=a[i];
+(gdb) n
+21              temp1=i;
+(gdb) n
+18      for(i=0;i<n;i++){
+(gdb) n
+19          if(a[i]>temp){
+(gdb) n
+18      for(i=0;i<n;i++){
+(gdb) n
+19          if(a[i]>temp){
+(gdb) n
+20              temp=a[i];
+(gdb) n
+21              temp1=i;
+(gdb) n
+18      for(i=0;i<n;i++){
+(gdb) n
+24      return temp1;
+(gdb) n
+25  }
+(gdb) n
+main () at p5original.c:40
+40      output(n,a,largest);
+(gdb) s
+output (n=3, a=0x7ffe59bb6570, largest=2) at p5original.c:27
+27      printf("The largest number in the array\n");
+(gdb) n
+The largest number in the array
+28      for(int i=0;i<n;i++){
+(gdb) n
+29          printf("%d ",a[i]);
+(gdb) n
+28      for(int i=0;i<n;i++){
+(gdb) n
+29          printf("%d ",a[i]);
+(gdb) n
+28      for(int i=0;i<n;i++){
+(gdb) n
+29          printf("%d ",a[i]);
+(gdb) n
+28      for(int i=0;i<n;i++){
+(gdb) n
+31      printf(" is %d ",largest);
+(gdb) n
+32  }
+(gdb) n
+main () at p5original.c:41
+41      return 0;
+(gdb) n
+42  }(gdb) 
