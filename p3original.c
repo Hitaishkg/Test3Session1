@@ -3,17 +3,13 @@ void input(int *n,int *r){
     printf("Enter the values of 'n' and 'r'\n");
     scanf("%d %d",n,r);
 }
-int fact(int n){
-    int factorial=1;
-    int i;
-    for( i=2;i<=n;i++){
-    factorial*=i;
-    }
-    return factorial;
-}
+
 int ncr(int n,int r){
-    int result;
-    result=(fact(n))/(fact(r)*fact(n-r));
+    int result=1;
+    for(int i=1;i<=r;i++){
+      result=result*(n-i+1)/i;
+    }
+
     return result;
 }
 void output(int n,int r,int result){
