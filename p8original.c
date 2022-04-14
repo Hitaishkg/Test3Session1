@@ -2,7 +2,7 @@
 typedef struct fraction
 {
 int num,den;
-}frac;
+}frac;//euclits algorithm
 int input_n(){
     int n;
     printf("Enter the number of numbers to be added\n");

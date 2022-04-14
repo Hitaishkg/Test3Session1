@@ -45,7 +45,6 @@ int main(){
     float a[n];
     input_coefficients(n,a);
     result=evaluate_polynomial(n,a,x);
-    output(n,a,x,result
+    output(n,a,x,result);
     return 0;
 }
- BB

@@ -1,4 +1,4 @@
-#include<stdio.h>//This program is wrong
+#include<stdio.h>
 
 typedef struct fraction
 {
@@ -9,7 +9,7 @@ frac input_fraction(){
     printf("Enter the Numeraor and Denominator of fraction\n");
     scanf("%d %d",&a.num,&a.den);
     return a;
-}g
+}
 int smallest_fraction(frac f1,frac f2, frac f3){
    float a,b,c,d,e,f,g,h,i,j;
     a=(f1.num);
